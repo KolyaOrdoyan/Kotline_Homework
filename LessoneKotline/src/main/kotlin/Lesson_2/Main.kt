@@ -12,7 +12,7 @@ fun main() {
         map[ColorsEnum.code] = ColorsEnum
     }
 
-    val result = map[scanner.nextInt()] ?: "here is no color with that id"
+    val result = map[scanner.nextInt()] ?: "There is no color with that id"
     println(result)
 
 }
