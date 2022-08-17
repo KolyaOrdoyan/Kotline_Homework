@@ -14,6 +14,7 @@ fun main() {
 
     val result = map[scanner.nextInt()] ?: "There is no color with that id"
     println(result)
+    println()
 
 }
 
