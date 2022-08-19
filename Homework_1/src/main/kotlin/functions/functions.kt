@@ -1,8 +1,6 @@
 package functions
 
-import kotlin.math.absoluteValue
-
-class Operations() {
+class Operations {
 
     fun max(list: List<Int>) {
         val max: Int = list.max()

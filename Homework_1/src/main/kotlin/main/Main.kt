@@ -1,6 +1,6 @@
 package main
 
-import Array.ArrayGenerator
+import array.ArrayGenerator
 import backstory.Backstory
 
 fun main() {

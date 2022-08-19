@@ -1,6 +1,6 @@
 package backstory
 
-import Array.ArrayGenerator
+import array.ArrayGenerator
 import functions.Operations
 import java.util.*
 
@@ -59,14 +59,14 @@ class Backstory {
 
             }
             "6" -> {
-                print("input number for serch:  ")
+                print("input number for search:  ")
                 val number: Int = scanner.nextInt()
                 operations.showAddNumber(list, number)
                 step(ArrayGenerator.arrayGenerator)
 
             }
             "7" -> {
-                print("input number for serch:  ")
+                print("input number for search:  ")
                 val number: Int = scanner.nextInt()
                 operations.duplicate(list, number)
                 step(ArrayGenerator.arrayGenerator)

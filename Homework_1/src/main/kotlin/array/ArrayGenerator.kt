@@ -1,4 +1,4 @@
-package Array
+package array
 
 import kotlin.random.Random
 
