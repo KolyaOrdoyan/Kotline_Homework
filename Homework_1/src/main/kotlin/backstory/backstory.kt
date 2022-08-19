@@ -1,6 +1,8 @@
 package backstory
 
+import functions.Aron
 import java.util.*
+import kotlin.random.Random
 
 class Backstory {
 
@@ -21,7 +23,25 @@ class Backstory {
         println()
 
         println("here's what i can")
+        print("But, first set the number to generate the array:   ")
+        var size = scanner.nextInt()
+        val arrayGenerator = List(size) { Random.nextInt(0, 100) }
+        println()
+
+
+        val fuck = Aron()
+        fuck.max(arrayGenerator)
+        fuck.min(arrayGenerator)
+        fuck.showList(arrayGenerator)
+        fuck.minimize(arrayGenerator)
+        fuck.maximize(arrayGenerator)
+
+        print("input number for serch:  ")
+        var number = scanner.nextInt()
+        fuck.showAddNumber(arrayGenerator,number)
+        fuck.krknvoxtver(arrayGenerator,number)
 
     }
+
 }
 
