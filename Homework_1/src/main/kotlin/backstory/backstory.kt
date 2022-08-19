@@ -9,6 +9,7 @@ class Backstory {
 
     fun start() {
         println("Hello my friend I am program '_' ")
+        println("press ENTER for continue")
         scanner.findInLine(" ")
         println(
             "My creator didn't me a name, but you can say me Jarvis " +
