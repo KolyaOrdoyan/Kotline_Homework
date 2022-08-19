@@ -74,7 +74,8 @@ class Backstory {
                 println("Thank you for using program byy '_'")
             }
             else -> {
-                println("aaaaaaaaaa")
+                println("pleas input only number")
+                step(ArrayGenerator.arrayGenerator)
             }
         }
     }
