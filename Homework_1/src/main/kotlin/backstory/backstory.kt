@@ -18,6 +18,7 @@ class Backstory {
                     "I don't know way i was created at this time '_'" +
                     "But i do absolutely other"
         )
+
         println()
         println("here's what i can")
         print("But, first set the number to generate the array:   ")
