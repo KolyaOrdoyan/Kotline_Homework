@@ -1,13 +1,14 @@
 package Main
 
+import Array.ArrayGenerator
 import backstory.Backstory
-import functions.Aron
+import java.util.*
 
 fun main() {
+    val scanner = Scanner(System.`in`)
 
-    val functions = Aron()
     val backstory = Backstory()
-
     backstory.start()
 
+    backstory.step(ArrayGenerator.arrayGenerator)
 }

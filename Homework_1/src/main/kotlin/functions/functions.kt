@@ -2,7 +2,7 @@ package functions
 
 import kotlin.math.absoluteValue
 
-class Aron() {
+class Operations() {
 
     fun max(list: List<Int>) {
         val max: Int = list.max()
@@ -44,8 +44,5 @@ class Aron() {
         println(count)
     }
 
-    fun dontTach() {
-
-    }
 }
 

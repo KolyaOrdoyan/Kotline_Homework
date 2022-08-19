@@ -1,13 +1,11 @@
 package backstory
 
-import functions.Aron
+import Array.ArrayGenerator
+import functions.Operations
 import java.util.*
-import kotlin.random.Random
 
 class Backstory {
-
     val scanner = Scanner(System.`in`)
-
 
     fun start() {
         println("Hello my friend I am program '_' ")
@@ -19,28 +17,68 @@ class Backstory {
                     "I don't know way i was created at this time '_'" +
                     "But i do absolutely other"
         )
-
         println()
-
         println("here's what i can")
         print("But, first set the number to generate the array:   ")
-        var size = scanner.nextInt()
-        val arrayGenerator = List(size) { Random.nextInt(0, 100) }
-        println()
+    }
 
+    fun step(list: List<Int>) {
 
-        val fuck = Aron()
-        fuck.max(arrayGenerator)
-        fuck.min(arrayGenerator)
-        fuck.showList(arrayGenerator)
-        fuck.minimize(arrayGenerator)
-        fuck.maximize(arrayGenerator)
+        println("Here are the steps i can take")
+        println("1. maximum and 2. minimum in List")
+        println("3. show list, 4. minimize, 5. maximize")
+        println("6. show your entered number and 7. show duplicate number")
+        println("8. end program")
 
-        print("input number for serch:  ")
-        var number = scanner.nextInt()
-        fuck.showAddNumber(arrayGenerator,number)
-        fuck.krknvoxtver(arrayGenerator,number)
+        var input = scanner.next()
 
+        val operations = Operations()
+
+        when (input) {
+            "1" -> {
+                operations.max(list)
+                step(ArrayGenerator.arrayGenerator)
+            }
+            "2" -> {
+                operations.min(list)
+                step(ArrayGenerator.arrayGenerator)
+
+            }
+            "3" -> {
+                operations.showList(list)
+                step(ArrayGenerator.arrayGenerator)
+
+            }
+           "4" -> {
+                operations.minimize(list)
+                step(ArrayGenerator.arrayGenerator)
+
+            }
+            "5" -> {
+                operations.maximize(list)
+                step(ArrayGenerator.arrayGenerator)
+
+            }
+            "6" -> {
+                print("input number for serch:  ")
+                var number = scanner.nextInt()
+                operations.showAddNumber(list, number)
+                step(ArrayGenerator.arrayGenerator)
+
+            }
+            "7" -> {
+                print("input number for serch:  ")
+                var number = scanner.nextInt()
+                operations.krknvoxtver(list, number)
+                step(ArrayGenerator.arrayGenerator)
+            }
+            "8" ->{
+              println("Thank you for using program byy '_'")
+            }
+            else -> {
+                println("aaaaaaaaaa")
+            }
+        }
     }
 
 }
