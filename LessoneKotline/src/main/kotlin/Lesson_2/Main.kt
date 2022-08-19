@@ -6,9 +6,9 @@ import java.util.Scanner
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    val map = hashMapOf<Int,ColorsEnum>()
+    val map = hashMapOf<Int, ColorsEnum>()
 
-    for (ColorsEnum in ColorsEnum.values()){
+    for (ColorsEnum in ColorsEnum.values()) {
         map[ColorsEnum.code] = ColorsEnum
     }
 
@@ -20,6 +20,6 @@ fun main() {
 enum class ColorsEnum(val code: Int, val colorCode: String) {
     RED(1, "#867585"),
     GREEN(2, "#676767"),
-    YELLOW(3,"#010001"),
-    PINK(4,"020202")
+    YELLOW(3, "#010001"),
+    PINK(4, "020202")
 }
