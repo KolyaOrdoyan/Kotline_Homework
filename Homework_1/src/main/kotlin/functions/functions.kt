@@ -35,7 +35,7 @@ class Operations() {
         }
     }
 
-    fun krknvoxtver(list: List<Int>, number: Int) {
+    fun duplicate(list: List<Int>, number: Int) {
         var count = 0
 
         for (n in list) {

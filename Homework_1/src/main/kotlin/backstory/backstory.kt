@@ -5,7 +5,7 @@ import functions.Operations
 import java.util.*
 
 class Backstory {
-    val scanner = Scanner(System.`in`)
+    private val scanner: Scanner = Scanner(System.`in`)
 
     fun start() {
         println("Hello my friend I am program '_' ")
@@ -23,15 +23,13 @@ class Backstory {
     }
 
     fun step(list: List<Int>) {
-
         println("Here are the steps i can take")
         println("1. maximum and 2. minimum in List")
         println("3. show list, 4. minimize, 5. maximize")
         println("6. show your entered number and 7. show duplicate number")
         println("8. end program")
 
-        var input = scanner.next()
-
+        val input: String? = scanner.next()
         val operations = Operations()
 
         when (input) {
@@ -49,7 +47,7 @@ class Backstory {
                 step(ArrayGenerator.arrayGenerator)
 
             }
-           "4" -> {
+            "4" -> {
                 operations.minimize(list)
                 step(ArrayGenerator.arrayGenerator)
 
@@ -61,25 +59,24 @@ class Backstory {
             }
             "6" -> {
                 print("input number for serch:  ")
-                var number = scanner.nextInt()
+                val number: Int = scanner.nextInt()
                 operations.showAddNumber(list, number)
                 step(ArrayGenerator.arrayGenerator)
 
             }
             "7" -> {
                 print("input number for serch:  ")
-                var number = scanner.nextInt()
-                operations.krknvoxtver(list, number)
+                val number: Int = scanner.nextInt()
+                operations.duplicate(list, number)
                 step(ArrayGenerator.arrayGenerator)
             }
-            "8" ->{
-              println("Thank you for using program byy '_'")
+            "8" -> {
+                println("Thank you for using program byy '_'")
             }
             else -> {
                 println("aaaaaaaaaa")
             }
         }
     }
-
 }
 
