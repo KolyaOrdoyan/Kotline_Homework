@@ -16,11 +16,11 @@ class Operations {
         println(list)
     }
 
-    fun minimize(list: List<Int>) {
+    fun descending(list: List<Int>) {
         println(list.sortedDescending())
     }
 
-    fun maximize(list: List<Int>) {
+    fun ascending(list: List<Int>) {
         println(list.sorted())
     }
 

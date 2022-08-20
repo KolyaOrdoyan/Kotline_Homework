@@ -18,7 +18,6 @@ class Backstory {
                     "I don't know way i was created at this time '_'" +
                     "But i do absolutely other"
         )
-
         println()
         println("here's what i can")
         print("But, first set the number to generate the array:   ")
@@ -27,7 +26,7 @@ class Backstory {
     fun step(list: List<Int>) {
         println("Here are the steps i can take")
         println("1. maximum and 2. minimum in List")
-        println("3. show list, 4. minimize, 5. maximize")
+        println("3. show list, 4. descending, 5. ascending")
         println("6. show your entered number and 7. show duplicate number")
         println("8. end program")
 
@@ -50,12 +49,12 @@ class Backstory {
 
             }
             "4" -> {
-                operations.minimize(list)
+                operations.descending(list)
                 step(ArrayGenerator.arrayGenerator)
 
             }
             "5" -> {
-                operations.maximize(list)
+                operations.ascending(list)
                 step(ArrayGenerator.arrayGenerator)
 
             }
