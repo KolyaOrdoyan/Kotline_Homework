@@ -26,7 +26,7 @@ class Backstory {
     fun step(list: List<Int>) {
         println("Here are the steps i can take")
         println("1. maximum and 2. minimum in List")
-        println("3. show list, 4. descending, 5. ascending")
+        println("3. show list, 4. descending order, 5. ascending order")
         println("6. show your entered number and 7. show duplicate number")
         println("8. end program")
 
