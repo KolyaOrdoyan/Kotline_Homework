@@ -62,7 +62,7 @@ class Start {
                 println(message)
             }
             else -> {
-                println("Pleas enter <<Id>> or <<register>>")
+                println("Pleas enter <<Id>>, <<register>>, <<client>> or <<calculate>> : ")
                 main()
             }
         }
