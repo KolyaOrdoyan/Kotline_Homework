@@ -22,5 +22,4 @@ class RegisterClient {
         val bank = Bank()
         bank.creditForOurClient()
     }
-
 }

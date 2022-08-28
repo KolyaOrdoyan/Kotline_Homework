@@ -14,7 +14,7 @@ enum class ClientEnum(val id: Int, private val namee: String, private val surnam
             }
         }
 
-        fun getColorById(id: Int): ClientEnum? {
+        fun getClientById(id: Int): ClientEnum? {
             return clientsEnumMap[id]
         }
     }
