@@ -19,7 +19,7 @@ class Customer {
             "2" -> {
                 val passport = Passport()
                 passport.reg()
-                passport.toString()
+                println(passport.toString())
             }
             else -> {
                 println("Pleas insert only <<1>> or <<2>>")
