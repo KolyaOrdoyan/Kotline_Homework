@@ -12,9 +12,23 @@ enum class ActionEnum(private val text: String) {
      4. Convers Bank 5. Ardshin Bank 6. IdBank""".trimMargin()
     ),
 
-    TEXT_BANK_SERVICES("1. cash in 2. cash out" +
-            "    3. transfers 4. deposit 5. loan " +
-            "6.account card 7.legal entities");
+    TEXT_BANK_SERVICES(
+        "1. cash in 2. cash out" +
+                "    3. transfers 4. loan " +
+                "5.account card 6.legal entities"
+    ),
+
+    TEXT_BANK_CASH_IN("How much money do you want to deposit into your account? "),
+    TEXT_BANK_CASH_OUT("How much money do you want to withdraw into your account? "),
+    TEXT_BANK_TRANSFERS("pleas enter the account number to which you want to transfer money: "),
+    TEXT_BANK_AMOUNT("The amount of money: "),
+
+
+    TEXT_BANK_CREDIT_CARDS_TYPE(
+        """1. VISA_CLASSIC, 2. MASTERCARD_STANDARD, 3. VISA_GOLD 
+        4. MASTERCARD_GOLD, 5. VISA_PLATINUM, 6. MASTERCARD_PLATINUM, 7. VISA_INFINITE
+    """.trimMargin()
+    );
 
     override fun toString(): String {
         return "$text"

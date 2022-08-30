@@ -1,17 +1,23 @@
 package customer.intendification
 
+import actions.scanner
 import java.util.*
+import kotlin.collections.HashMap
+import kotlin.random.Random
 
 class IdCard {
-    private var lastID: Int = 0
+    private var bankId: Int = 1
 
     var surname: String = ""
     var name: String = ""
     var birthDate: String = ""
     var identityNumber: Int = 0
+    var balance: Long = 0
 
     val scanner = Scanner(System.`in`)
-    private val id: Int = lastID + 1
+    private val id: Int = bankId
+    private var account: String = generateAccountNumber()
+    var customerMap = HashMap<Int, String>()
 
     fun reg() {
         print("Pleas insert your name: ")
@@ -25,8 +31,15 @@ class IdCard {
 
     }
 
+
+    private fun generateAccountNumber(): String {
+        var accountNumber = "205"
+        accountNumber += Random.nextLong(100000000000, 9999999999999)
+        return accountNumber
+    }
+
     override fun toString(): String {
         return "IdCard(surname='$surname', name='$name', birthDate='$birthDate'," +
-                " identityNumber=$identityNumber your id is: $id)"
+                " identityNumber=$identityNumber your id is: $id balance= $balance), account number: $account "
     }
 }

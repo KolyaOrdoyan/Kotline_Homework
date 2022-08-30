@@ -7,7 +7,7 @@ import java.util.*
 class Customer {
     val scanner = Scanner(System.`in`)
 
-    fun vibor() {
+    fun choice() {
         println("Pleas select 1. IdCard 2. Passport")
 
         when (scanner.next()) {
@@ -23,7 +23,7 @@ class Customer {
             }
             else -> {
                 println("Pleas insert only <<1>> or <<2>>")
-                vibor()
+                choice()
             }
         }
     }

@@ -21,19 +21,16 @@ class ConversBank : CentralBank(){
                 transfers()
             }
             "4" -> {
-                deposit()
-            }
-            "5" -> {
                 loan()
             }
-            "6" -> {
+            "5" -> {
                 accountCard()
             }
-            "7" -> {
+            "6" -> {
                 legalEntities()
             }
             else -> {
-                println("pleas enter only this numbers <<1>> <<2>> <<3>> <<4>> <<5>> <<6>> <<7>> ")
+                println("pleas enter only this numbers <<1>> <<2>> <<3>> <<4>> <<5>> <<6>> ")
                 next()
             }
         }
