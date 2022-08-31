@@ -14,7 +14,7 @@ enum class ActionEnum(private val text: String) {
 
     TEXT_BANK_SERVICES(
         "1. cash in 2. cash out" +
-                "    3. transfers 4. loan " +
+                " 3. transfers 4. loan " +
                 "5.account card 6.legal entities"
     ),
 
@@ -28,6 +28,12 @@ enum class ActionEnum(private val text: String) {
         """1. VISA_CLASSIC, 2. MASTERCARD_STANDARD, 3. VISA_GOLD 
         4. MASTERCARD_GOLD, 5. VISA_PLATINUM, 6. MASTERCARD_PLATINUM, 7. VISA_INFINITE
     """.trimMargin()
+    ),
+
+    TEXT_SERVICE_FROM_CORPORATION(
+        "1. cash in 2. cash out +\n" +
+                " 3. transfers 4. loan +\n" +
+                " \"5.account card"
     );
 
     override fun toString(): String {

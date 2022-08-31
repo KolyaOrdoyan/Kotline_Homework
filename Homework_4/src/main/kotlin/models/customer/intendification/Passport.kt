@@ -1,4 +1,4 @@
-package customer.intendification
+package models.customer.intendification
 
 import java.util.*
 
@@ -31,5 +31,4 @@ class Passport {
         return "Passport(surname='$surname', name='$name', birthDate='$birthDate'," +
                 " identityNumber=$identityNumber, address= $address)  your id is: $id"
     }
-
 }

@@ -3,10 +3,9 @@ package banks.centralBank
 import actions.ActionEnum
 import actions.App
 import actions.scanner
-import customer.Customer
-import customer.intendification.IdCard
+import models.customer.Customer
+import models.customer.intendification.IdCard
 import models.creditCard.CreditCard
-import models.creditCard.CreditCardEnum
 import models.legalEntities.LegalEntities
 import models.loan.Loan
 
@@ -21,8 +20,7 @@ open class CentralBank {
         idCard.balance += money
         println("your account balance $idCard")
         val start = App()
-        println("back to menu ")
-        choseMenu()
+        backToMenu()
     }
 
     fun cashOut() {
@@ -33,8 +31,7 @@ open class CentralBank {
         var idCard = IdCard()
         idCard.balance -= money
         println("your account balance $idCard")
-        println("back to menu ")
-        choseMenu()
+        backToMenu()
     }
 
     fun transfers() {
@@ -46,24 +43,26 @@ open class CentralBank {
         var idCard = IdCard()
         idCard.balance -= money
         println("your balance is: $idCard")
-        println("back to menu ")
-        choseMenu()
+        backToMenu()
     }
 
     fun loan() {
         insertId()
         val loan = Loan()
         loan.loanForCustomer()
+        backToMenu()
     }
 
     fun accountCard() {
         val creditCard = CreditCard()
         creditCard.creditCardGeneration()
+        backToMenu()
     }
 
     fun legalEntities() {
         val legalEntities = LegalEntities()
         legalEntities.legalEntities()
+        backToMenu()
     }
 
     fun insertId() {
@@ -71,7 +70,7 @@ open class CentralBank {
         when (scanner.next()) {
             "1" -> {
                 val map = IdCard()
-                println(map.customerMap)
+//                println(map.customerMap)
             }
             "2" -> {
                 val customer = Customer()
@@ -84,7 +83,7 @@ open class CentralBank {
         }
     }
 
-    fun choseMenu() {
+    fun chooseMenu() {
         println(ActionEnum.TEXT_BANK_SERVICES)
 
         when (scanner.next()) {
@@ -108,7 +107,19 @@ open class CentralBank {
             }
             else -> {
                 println("pleas enter only this numbers <<1>> <<2>> <<3>> <<4>> <<5>> <<6>> ")
-                choseMenu()
+                chooseMenu()
+            }
+        }
+    }
+
+    private fun backToMenu() {
+        println("1. back to menu, 2. end program ")
+        when (scanner.next()) {
+            "1" -> {
+                chooseMenu()
+            }
+            "2" -> {
+                println("thank you for using this program: ")
             }
         }
     }

@@ -1,6 +1,5 @@
 package banks.ameriaBank
 
-import actions.ActionEnum
 import banks.centralBank.CentralBank
 import java.util.*
 
@@ -9,7 +8,7 @@ class AmeriaBank : CentralBank() {
     val scanner = Scanner(System.`in`)
 
     fun next() {
-            choseMenu()
+            chooseMenu()
         when (scanner.next()) {
             "1" -> {
                 cashIn()

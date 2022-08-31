@@ -1,7 +1,7 @@
-package customer
+package models.customer
 
-import customer.intendification.IdCard
-import customer.intendification.Passport
+import models.customer.intendification.IdCard
+import models.customer.intendification.Passport
 import java.util.*
 
 class Customer {
