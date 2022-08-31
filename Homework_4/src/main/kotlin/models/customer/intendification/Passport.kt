@@ -28,7 +28,7 @@ class Passport {
     }
 
     override fun toString(): String {
-        return "Passport(surname='$surname', name='$name', birthDate='$birthDate'," +
-                " identityNumber=$identityNumber, address= $address)  your id is: $id"
+        return "Passport your id is: $id (surname='$surname', name='$name', birthDate='$birthDate'," +
+                " identityNumber=$identityNumber, address= $address)"
     }
 }

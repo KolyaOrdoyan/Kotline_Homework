@@ -18,7 +18,7 @@ open class CentralBank {
         val money = scanner.nextLong()
         var idCard = IdCard()
         idCard.balance += money
-        println("your account balance $idCard")
+        println("your account balance ${idCard.balance}")
         val start = App()
         backToMenu()
     }
@@ -30,7 +30,7 @@ open class CentralBank {
         val money = scanner.nextLong()
         var idCard = IdCard()
         idCard.balance -= money
-        println("your account balance $idCard")
+        println("your account balance ${idCard.balance}")
         backToMenu()
     }
 
@@ -42,7 +42,7 @@ open class CentralBank {
         val money = scanner.nextLong()
         var idCard = IdCard()
         idCard.balance -= money
-        println("your balance is: $idCard")
+        println("your balance is: ${idCard.balance}")
         backToMenu()
     }
 

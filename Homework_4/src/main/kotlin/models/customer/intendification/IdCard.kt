@@ -35,7 +35,7 @@ class IdCard {
     }
 
     override fun toString(): String {
-        return "IdCard(surname='$surname', name='$name', birthDate='$birthDate'," +
-                " identityNumber=$identityNumber your id is: $id balance= $balance), account number: $account "
+        return "IdCard   your id is: $id (surname='$surname', name='$name', birthDate='$birthDate'," +
+                " identityNumber=$identityNumber  balance= $balance, account number: $account) "
     }
 }
