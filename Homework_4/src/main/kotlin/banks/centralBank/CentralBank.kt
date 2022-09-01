@@ -6,13 +6,13 @@ import actions.scanner
 import models.customer.Customer
 import models.customer.intendification.IdCard
 import models.creditCard.CreditCard
+import models.customer.CustomerEnum
 import models.legalEntities.LegalEntities
 import models.loan.Loan
 
 open class CentralBank {
 
     fun cashIn() {
-        insertId()
         println(ActionEnum.TEXT_BANK_CASH_IN)
         print(ActionEnum.TEXT_BANK_AMOUNT)
         val money = scanner.nextLong()
@@ -24,7 +24,6 @@ open class CentralBank {
     }
 
     fun cashOut() {
-        insertId()
         println(ActionEnum.TEXT_BANK_CASH_OUT)
         print(ActionEnum.TEXT_BANK_AMOUNT)
         val money = scanner.nextLong()
@@ -35,7 +34,6 @@ open class CentralBank {
     }
 
     fun transfers() {
-        insertId()
         print(ActionEnum.TEXT_BANK_TRANSFERS)
         val accountNumber = scanner.nextInt()
         print("The amount of money you wnt to transfer: ")
@@ -47,7 +45,6 @@ open class CentralBank {
     }
 
     fun loan() {
-        insertId()
         val loan = Loan()
         loan.loanForCustomer()
         backToMenu()
@@ -69,8 +66,7 @@ open class CentralBank {
         print("pleas select one is true 1. <<insert id>> 2. <<register in Bank>>   ")
         when (scanner.next()) {
             "1" -> {
-                val map = IdCard()
-//                println(map.customerMap)
+                customerSearch()
             }
             "2" -> {
                 val customer = Customer()
@@ -120,6 +116,25 @@ open class CentralBank {
             }
             "2" -> {
                 println("thank you for using this program: ")
+            }
+        }
+    }
+
+    private fun customerSearch() {
+        print("pleas insert your ID: ")
+
+        when (scanner.next()) {
+            "1" -> {
+                val result = CustomerEnum.getCustomerById(1)
+                println(result)
+            }
+            "2" -> {
+                val result = CustomerEnum.getCustomerById(2)
+                println(result)
+            }
+            else -> {
+                println("Your id was not found pleas try again: ")
+                customerSearch()
             }
         }
     }

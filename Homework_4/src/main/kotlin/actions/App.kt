@@ -3,6 +3,7 @@ package actions
 import banks.ameriaBank.AmeriaBank
 import banks.araratBank.AraratBank
 import banks.ardshinBank.ArdshinBank
+import banks.centralBank.CentralBank
 import banks.conversBank.ConversBank
 import banks.idBank.IdBank
 import banks.inecoBank.InecoBank
@@ -18,12 +19,16 @@ class App {
         when (scanner.next()) {
             "1" -> {
                 println(ActionEnum.TEXT_BANK_ARARAT)
-                when(scanner.next()){
-                    "1"->{
+                when (scanner.next()) {
+                    "1" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = AraratBank()
                         bank.next()
                     }
-                    "2"->{
+                    "2" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = InecoBank()
                         bank.next()
                     }
@@ -31,12 +36,16 @@ class App {
             }
             "2" -> {
                 println(ActionEnum.TEXT_BANK_KOTAYQ)
-                when(scanner.next()){
-                    "1"->{
+                when (scanner.next()) {
+                    "1" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = AmeriaBank()
                         bank.next()
                     }
-                    "2"->{
+                    "2" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = ConversBank()
                         bank.next()
                     }
@@ -44,12 +53,16 @@ class App {
             }
             "3" -> {
                 println(ActionEnum.TEXT_BANK_SYUNIQ)
-                when(scanner.next()){
-                    "1"->{
+                when (scanner.next()) {
+                    "1" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = ArdshinBank()
                         bank.next()
                     }
-                    "2"->{
+                    "2" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = IdBank()
                         bank.next()
                     }
@@ -57,28 +70,40 @@ class App {
             }
             "4" -> {
                 println(ActionEnum.TEXT_BANK_EREVAN)
-                when(scanner.next()){
-                    "1"->{
+                when (scanner.next()) {
+                    "1" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = AraratBank()
                         bank.next()
                     }
-                    "2"->{
+                    "2" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = InecoBank()
                         bank.next()
                     }
-                    "3"->{
+                    "3" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = AmeriaBank()
                         bank.next()
                     }
-                    "4"->{
+                    "4" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = ConversBank()
                         bank.next()
                     }
-                    "5"->{
+                    "5" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = ArdshinBank()
                         bank.next()
                     }
-                    "6"->{
+                    "6" -> {
+                        val centralBank = CentralBank()
+                        centralBank.insertId()
                         val bank = IdBank()
                         bank.next()
                     }
