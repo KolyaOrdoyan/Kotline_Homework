@@ -1,6 +1,6 @@
 package operations
 
-import app.MainMenu
+import operations.app.App
 import operations.credit_card.CreditCard
 import operations.legal_entities.LegalEntities
 import operations.loan.Loan
@@ -16,33 +16,33 @@ class Operations {
                     "7.end program"
         )
 
-        when (MainMenu.scanner.next()) {
+        when (App.scanner.next()) {
             "1" -> {
                 println("How much money do you want to deposit into your account?")
                 print("The amount of money: ")
-                val money = MainMenu.scanner.nextLong()
-                MainMenu.customer.balance += money
-                print(MainMenu.customer)
-                println("Your balance is: ${MainMenu.customer.balance}")
+                val money = App.scanner.nextLong()
+                App.customer.balance += money
+                print(App.customer)
+                println("Your balance is: ${App.customer.balance}")
                 operations()
             }
 
             "2" -> {
                 println("How much money do you want to withdraw from your account?")
                 print("The amount of money: ")
-                val money = MainMenu.scanner.nextLong()
-                MainMenu.customer.balance -= money
-                println("Your account balance ${MainMenu.customer.balance}")
+                val money = App.scanner.nextLong()
+                App.customer.balance -= money
+                println("Your account balance ${App.customer.balance}")
                 operations()
             }
 
             "3" -> {
                 println("pleas enter the account number to which you want to transfer money: ")
-                val accountNumber = MainMenu.scanner.nextLong()
+                val accountNumber = App.scanner.nextLong()
                 print("The amount of money you wnt to transfer: ")
-                val money = MainMenu.scanner.nextLong()
-                MainMenu.customer.balance -= money
-                println("your balance is: ${MainMenu.customer.balance}")
+                val money = App.scanner.nextLong()
+                App.customer.balance -= money
+                println("your balance is: ${App.customer.balance}")
                 operations()
             }
 
@@ -78,7 +78,7 @@ class Operations {
             "1. loan 2.account card 3. end program"
         )
 
-        when (MainMenu.scanner.next()) {
+        when (App.scanner.next()) {
 
             "1" -> {
                 val loan = Loan()

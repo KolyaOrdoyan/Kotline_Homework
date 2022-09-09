@@ -1,4 +1,4 @@
-package app
+package operations.app
 
 import customer.Customer
 import customer.CustomerEnum
@@ -8,9 +8,9 @@ import customer.indentification.Passport
 import operations.Operations
 import java.util.*
 
-class MainMenu {
+class App {
 
-    companion object MainMenu {
+    companion object App {
         val scanner = Scanner(System.`in`)
         var customer: Customer = identifyCustomer()
 
@@ -42,7 +42,7 @@ class MainMenu {
             when (scanner.next()) {
                 "1" -> {
                     val customer = Customer(dataEntry("IdCard"))
-                    MainMenu.customer = customer
+                    App.customer = customer
                     println(customer)
                     val operations = Operations()
                     operations.operations()
@@ -50,7 +50,7 @@ class MainMenu {
 
                 "2" -> {
                     val customer = Customer(dataEntry("Passport"))
-                    MainMenu.customer = customer
+                    App.customer = customer
                     println(customer)
                     val operations = Operations()
                     operations.operations()
