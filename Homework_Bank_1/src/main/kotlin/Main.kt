@@ -1,6 +1,6 @@
-import app.App
+import bank.all_banks.AllBanks
 
 fun main(){
-    val start = App()
+    val start = AllBanks()
     start.start()
 }

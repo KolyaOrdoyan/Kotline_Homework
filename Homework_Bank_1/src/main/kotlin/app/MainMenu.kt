@@ -1,4 +1,4 @@
-package app.menu
+package app
 
 import customer.Customer
 import customer.CustomerEnum
@@ -27,6 +27,7 @@ class MainMenu {
                     val operations = Operations()
                     operations.operationsForBankCustomers()
                 }
+
                 "2" -> {
                     customerRegister()
                 }
@@ -43,12 +44,18 @@ class MainMenu {
                     val customer = Customer(dataEntry("IdCard"))
                     MainMenu.customer = customer
                     println(customer)
+                    val operations = Operations()
+                    operations.operations()
                 }
+
                 "2" -> {
                     val customer = Customer(dataEntry("Passport"))
                     MainMenu.customer = customer
                     println(customer)
+                    val operations = Operations()
+                    operations.operations()
                 }
+
                 else -> {
                     print("Pleas insert <<1>> or <<2>>")
                     customerRegister()

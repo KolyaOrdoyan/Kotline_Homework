@@ -1,6 +1,6 @@
 package operations
 
-import app.menu.MainMenu
+import app.MainMenu
 import operations.credit_card.CreditCard
 import operations.legal_entities.LegalEntities
 import operations.loan.Loan
@@ -12,7 +12,8 @@ class Operations {
         println(
             "1. cash in 2. cash out" +
                     " 3. transfers 4. loan " +
-                    "5.account card 6.legal entities"
+                    "5.account card 6.legal entities" +
+                    "7.end program"
         )
 
         when (MainMenu.scanner.next()) {
@@ -61,8 +62,11 @@ class Operations {
                 val legalEntities = LegalEntities()
                 legalEntities.legalEntities()
             }
+            "7"->{
+                println("Thank you for using this program :)")
+            }
             else->{
-                println("pleas enter only this numbers <<1>> <<2>> <<3>> <<4>> <<5>> <<6>> ")
+                println("pleas enter only this numbers <<1>> <<2>> <<3>> <<4>> <<5>> <<6>> <<7>> ")
                 operations()
             }
         }
@@ -71,7 +75,7 @@ class Operations {
      fun operationsForBankCustomers(){
         println("Choose one of the services provided by the bank:  ")
         println(
-            "1. loan 2.account card"
+            "1. loan 2.account card 3. end program"
         )
 
         when (MainMenu.scanner.next()) {
@@ -88,8 +92,11 @@ class Operations {
                 operationsForBankCustomers()
             }
 
+            "3"->{
+                println("Thank you for using this program :)")
+            }
             else->{
-                println("pleas enter only this numbers <<1>> <<2>> ")
+                println("pleas enter only this numbers <<1>> <<2>> <<3>>")
                 operationsForBankCustomers()
             }
         }
