@@ -4,7 +4,6 @@ import actions.ActionEnum
 import actions.App
 import actions.scanner
 import models.customer.Customer
-import models.customer.intendification.IdCard
 import models.creditCard.CreditCard
 import models.customer.CustomerEnum
 import models.legalEntities.LegalEntities
@@ -16,9 +15,8 @@ open class CentralBank {
         println(ActionEnum.TEXT_BANK_CASH_IN)
         print(ActionEnum.TEXT_BANK_AMOUNT)
         val money = scanner.nextLong()
-        var idCard = IdCard()
-        idCard.balance += money
-        println("your account balance ${idCard.balance}")
+//        Customer.customers.balance += money
+//        println("your account balance ${Customer.customers.balance}")
         val start = App()
         backToMenu()
     }
@@ -27,9 +25,8 @@ open class CentralBank {
         println(ActionEnum.TEXT_BANK_CASH_OUT)
         print(ActionEnum.TEXT_BANK_AMOUNT)
         val money = scanner.nextLong()
-        var idCard = IdCard()
-        idCard.balance -= money
-        println("your account balance ${idCard.balance}")
+//        Customer.customers.balance -= money
+//        println("your account balance ${Customer.customers.balance}")
         backToMenu()
     }
 
@@ -38,9 +35,8 @@ open class CentralBank {
         val accountNumber = scanner.nextInt()
         print("The amount of money you wnt to transfer: ")
         val money = scanner.nextLong()
-        var idCard = IdCard()
-        idCard.balance -= money
-        println("your balance is: ${idCard.balance}")
+//        Customer.customers.balance -= money
+//        println("your account balance ${Customer.customers.balance}")
         backToMenu()
     }
 

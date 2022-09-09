@@ -8,17 +8,17 @@ enum class CustomerEnum(
     KAREN(1, "Karen", "Ashotyan", "2001.01.02", 205212245645466),
     ASHOT(2, "Ashot", "Hambardzumyan", "1995.10.30", 2052565565485);
 
-    companion object ClientsEnumMap {
-        private var clientsEnumMap = mutableMapOf<Int, CustomerEnum>()
+    companion object CustomerEnumMap {
+        private var customersEnumMap = mutableMapOf<Int, CustomerEnum>()
 
         init {
             for (client in values()) {
-                clientsEnumMap[client.id] = client
+                customersEnumMap[client.id] = client
             }
         }
 
         fun getCustomerById(id: Int): CustomerEnum? {
-            return clientsEnumMap[id]
+            return customersEnumMap[id]
         }
     }
 

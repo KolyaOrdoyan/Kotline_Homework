@@ -21,43 +21,57 @@ class CreditCard() {
                 println(CreditCardEnum.VISA_CLASSIC)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             "2" -> {
                 println(CreditCardEnum.MASTERCARD_STANDARD)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             "3" -> {
                 println(CreditCardEnum.VISA_GOLD)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             "4" -> {
                 println(CreditCardEnum.MASTERCARD_GOLD)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             "5" -> {
                 println(CreditCardEnum.VISA_PLATINUM)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             "6" -> {
                 println(CreditCardEnum.MASTERCARD_PLATINUM)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             "7" -> {
                 println(CreditCardEnum.VISA_INFINITE)
                 val insertId = CentralBank()
                 insertId.insertId()
-                println(toString())
+                println(insertId.toString())
+                val creditCard = CreditCard()
+                println(creditCard.toString())
             }
             else -> {
                 println("pleas enter only this numbers <<1>> <<2>> <<3>> <<4>> <<5>> <<6>> <<7>>")

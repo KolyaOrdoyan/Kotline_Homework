@@ -10,6 +10,9 @@ class App {
         fun start() {
             ChooseBankMenu.show()
             MainMenu.show()
+
         }
+
     }
+
 }

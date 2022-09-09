@@ -7,8 +7,6 @@ class CashMenu {
     companion object CashMenuMenu {
         private val scan = Scanner(System.`in`)
 
-
-
         fun show() {
             println("1. Cash in")
             println("2. Cash out")
